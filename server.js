@@ -252,7 +252,7 @@ app.route('/movie')
         })
     });
 
-router.route('/movie/:movieid')
+router.route('/movie/:movieId')
     .get(authJwtController.isAuthenticated, function (req, res) {
         var id = req.params.movieid;
         Movie.findById(id, function (err, movie) {
